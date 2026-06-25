@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: my-web-app
+    runtime: node # Change to python, go, ruby, static, etc. depending on your tech stack
+    buildCommand: npm run build # Change to your stack's build command
+    startCommand: npm start # Change to your stack's start command
+    envVars:
+      - key: DATABASE_URL
+        sync: false # This prevents the value from being hardcoded in GitHub
